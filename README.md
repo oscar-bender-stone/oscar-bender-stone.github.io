@@ -1,2 +1,5 @@
-# oscar-bender-stone.github.io
-Academic portfolio (2026-).
+# Academic Portfolio
+
+My academic portfolio website.
+
+Dates: 2026-Present.
