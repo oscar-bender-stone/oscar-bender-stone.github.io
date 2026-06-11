@@ -8,12 +8,6 @@ include-before: |
   </div>
 ---
 
-<!-- TODO: add base template for navigation links. -->
-<div>
-  <a href="index.html"> About </a>
-  <a href="docs/publications.html"> Publications </a>
-</div>
-
 ::: {#refs}
 
 :::
