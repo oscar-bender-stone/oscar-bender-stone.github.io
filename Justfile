@@ -10,6 +10,13 @@ default: build
 
 rebuild: clean build
 
+push:
+    @git checkout gh-pages && \
+      git merge gh-pages main && \
+      git push && \
+      git checkout main && \
+      git push
+
 # Iterate over all files in markdown
 # and check time-stamp for changes
 build:
