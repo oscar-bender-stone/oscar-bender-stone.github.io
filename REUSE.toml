@@ -11,6 +11,7 @@ SPDX-License-Identifier = "LicenseRef-Proprietary"
 [[annotations]]
 path = [
   "assets/publications.bib",
+  "assets/stopwords.txt",
   "source/templates/*.html",
   "source/python/uv.lock",
   "markdown/publications.md",
