@@ -44,4 +44,4 @@ build:
 
 clean:
     @echo "Removing generated HTML files..."
-    rm -f docs/*.html
+    rm -f pages/*.html
