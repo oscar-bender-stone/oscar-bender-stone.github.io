@@ -1,11 +1,11 @@
 version = 3
 
 [[annotations]]
-path = "publications.bib"
+path = "assets/publications.bib"
 SPDX-FileCopyrightText = "Copyright (c) 2026 Oscar Bender-Stone"
 SPDX-License-Identifier = "CC0-1.0"
 
 [[annotations]]
-path = "assets/images/headshot.bib"
+path = ["assets/icons/favicon.ico", "assets/images/headshot.jpg"]
 SPDX-FileCopyrightText = "Copyright (c) 2026 Oscar Bender-Stone. All Rights Reserved."
 SPDX-License-Identifier = "NONE"
