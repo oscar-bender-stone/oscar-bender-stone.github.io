@@ -16,6 +16,7 @@ with open("./assets/interests.json") as file:
 
 # Inspired by this theme:
 # https://duckduckgo.com/?q=doom+one+github&ia=web
+
 palette = {
     "red": "#ff6c6b",
     "orange": "#da8548",
@@ -29,7 +30,7 @@ palette = {
 }
 
 colormap = matplotlib.colors.LinearSegmentedColormap.from_list(
-    "doom_one", list(palette.values())
+    "doom_one", list(palette.values()), N=len(palette)
 )
 
 wordcloud = WordCloud(
