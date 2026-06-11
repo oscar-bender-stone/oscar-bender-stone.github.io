@@ -8,6 +8,8 @@ license := "SPDX-License-" + "Identifier: " + "MIT"
 
 default: build
 
+all: build push
+
 rebuild: clean build
 
 push:
