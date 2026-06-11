@@ -7,6 +7,8 @@
 ![2026 Copyright Oscar Bender-Stone. All Rights Reserved.](../assets/images/headshot.jpg){alt="Professional
 Headshot" .circle-image}
 
+<div markdown="1">
+
 Hello! I am an incoming graduate student at the
 [University of Iowa](https://cs.uiowa.edu) advised by
 [Garrett Morris](https://jgbm.github.io).
@@ -16,6 +18,7 @@ I study Programming Languages. Specifically, I'm working on
 like to incorporate theoretical ideas, especially from mathematical logic and
 computability theory.
 
+</div>
 </div>
 
 ## Interests
