@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com>
+# SPDX-License-Identifier: CC0-1.0
+
+from: markdown
+to: html
+standalone: true
+
+# Styling and templates
+css: [style.css]
+include-before-body: [source/templates/_navigation.html]
