@@ -53,6 +53,8 @@ class ColorManager:
 colormanager = ColorManager(palette)
 
 wordcloud = WordCloud(
-    background_color="white", color_func=colormanager.get_color
+    background_color="white",
+    color_func=colormanager.get_color,
+    prefer_horizontal=0.50,
 ).generate_from_frequencies(word_counts)
 wordcloud.to_file("./assets/images/interests_cloud.png")
