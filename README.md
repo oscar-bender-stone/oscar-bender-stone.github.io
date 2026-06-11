@@ -4,8 +4,18 @@
 # Academic Portfolio
 
 > [!WARNING]
-> This website is highly Work in Progress!
+> This website is Work in Progress!
 
 My academic portfolio website.
 
 Dates: 2026-Present.
+
+## Generation
+
+This website uses basic HTML generation, primarily for publications. To generate
+files, make sure to have [`just`](https://github.com/casey/just) and
+[`pandoc`](https://pandoc.org) installed.
+
+### Publications
+
+Run: `just bibtex`
