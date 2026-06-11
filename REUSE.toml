@@ -12,6 +12,7 @@ SPDX-License-Identifier = "LicenseRef-Proprietary"
 path = [
   "assets/publications.bib",
   "source/templates/*.html",
+  "source/python/uv.lock",
   "markdown/publications.md",
 ]
 SPDX-FileCopyrightText = "Copyright (c) 2026 Oscar Bender-Stone"

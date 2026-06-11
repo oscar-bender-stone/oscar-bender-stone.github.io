@@ -19,6 +19,14 @@ push:
       git checkout main && \
       git push
 
+# TODO: set desired font
+wordcloud:
+    @uv --project ./source/python \
+      run wordcloud_cli \
+      --text ./assets/interests.txt \
+      --imagefile ./assets/images/interests_cloud.png \
+      --background white
+
 # Iterate over all files in markdown
 # and check time-stamp for changes
 build:

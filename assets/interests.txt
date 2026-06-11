@@ -1,0 +1,2 @@
+I study Programming Languages. Specifically, I'm working on
+program reuse and bootstrapping. I like to incorporate theoretical ideas, especially from mathematical logic and computability theory.
