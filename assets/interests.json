@@ -1,14 +1,21 @@
 {
   "Programming Languages": 50,
   "programs": 50,
+  "proofs": 50,
   "formal methods": 50,
   "Information": 50,
   "foundations": 40,
   "reuse": 40,
   "interoperability": 40,
+  "Definability": 40,
   "Specification Mining": 30,
+  "Proof Search": 30,
+  "Information Management": 30,
   "Proof Management": 30,
   "bootstrapping": 30,
+  "refleciton": 30,
+  "Proof Pearls": 20,
   "computability": 20,
+  "complexity": 20,
   "Model Theory": 20
 }
