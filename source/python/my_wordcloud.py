@@ -3,6 +3,8 @@
 
 # TODO: adjust default font
 # TODO: adjust palette as needed
+# TODO: record seeds
+# to recreate certain configurations
 
 import json
 import random
