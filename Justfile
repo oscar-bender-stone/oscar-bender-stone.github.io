@@ -35,8 +35,8 @@ build:
             if [ ! -f "$target" ] || [ "$file" -nt "$target" ]; then \
                 echo "   Compiling $file ──> $target"; \
                 pandoc "$file" -d pandoc-config.yaml \
-                    --metadata license="{{ license }}" \
-                    --metadata copyright="{{ copyright }}" \
+                    -M license="{{ license }}" \
+                    -M copyright="{{ copyright }}" \
                     -o "$target"; \
             fi; \
         done' _ {} +

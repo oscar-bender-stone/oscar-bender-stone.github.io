@@ -1,6 +1,7 @@
 ---
 title: Publications
-nocite: "@*"
+nocite: |
+  @*
 ---
 
 ::: {#refs}

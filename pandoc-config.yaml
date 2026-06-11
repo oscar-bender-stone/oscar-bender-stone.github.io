@@ -11,8 +11,8 @@ citeproc: true
 # be overriden on a per file basis.
 # (Useful for blogs.)
 bibliography: [./assets/publications.bib]
-metadata:
-  nocite: "@*"
+metadata-files:
+  - bibtex-metadata.yaml
 
 # Styling and templates
 # Use path relative to *docs*,
