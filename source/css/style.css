@@ -9,6 +9,20 @@
   object-fit: fill;
 }
 
+/* Backup in case image doesn't load. */
+.circle-image:after {
+  content: attr(alt);
+  user-select: text;
+  display: block;
+  position: absolute;
+  top: 210px;
+  left: 0;
+  width: 100%;
+  color: #333;
+  border-radius: 0;
+}
+
+
 .row {
   display: flex;
 }
