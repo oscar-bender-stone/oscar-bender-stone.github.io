@@ -18,7 +18,7 @@ build:
     @find markdown -name "*.md" -exec sh -c ' \
         for file; do \
             stem=$(basename "$file" .md); \
-            target="docs/$stem.html"; \
+            target="pages/$stem.html"; \
             if [ ! -f "$target" ] || [ "$file" -nt "$target" ]; then \
                 echo "   Compiling $file ──> $target"; \
                 pandoc "$file" -d pandoc-config.yaml \
