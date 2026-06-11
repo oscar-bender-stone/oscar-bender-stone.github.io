@@ -2,7 +2,4 @@
 // SPDX-License-Identifier: MIT
 // Currently stores configuration variables.
 
-export const CONFIG = {
-  fullName: "Oscar Bender-Stone",
-  emailAddress: "obenderstone@uiowa.edu",
-};
+export const CONFIG = {};
