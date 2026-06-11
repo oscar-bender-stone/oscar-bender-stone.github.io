@@ -28,14 +28,10 @@ Email: [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu).
 
 ## Interests
 
-<div class="row" markdown="1">
-
-<div markdown="1">
+![](../assets/images/interests_cloud.png){alt="Interests wordcloud."}\
 
 ### Program Reuse
 
 ### Bootstrapping
-
-</div>
 
 </div>
