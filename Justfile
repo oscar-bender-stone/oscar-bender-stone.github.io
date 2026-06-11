@@ -18,7 +18,7 @@ build:
             stem=$(basename "$file" .md); \
             target="docs/$stem.html"; \
             if [ ! -f "$target" ] || [ "$file" -nt "$target" ]; then \
-                echo "   Compiling $src ──> $target (Modified)"; \
+                echo "   Compiling $file ──> $target (Modified)"; \
                 pandoc "$file" -d pandoc-config.yaml \
                     --metadata license="{{ license }}" \
                     --metadata copyright="{{ copyright }}" \
