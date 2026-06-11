@@ -5,6 +5,15 @@ from: markdown
 to: html
 standalone: true
 
+# Setup citations
+citeproc: true
+# TODO: ensure this can
+# be overriden on a per file basis.
+# (Useful for blogs.)
+bibliography: [./assets/publications.bib]
+metadata:
+  nocite: "@*"
+
 # Styling and templates
 css: [style.css]
 include-before-body: [source/templates/_navigation.html]
