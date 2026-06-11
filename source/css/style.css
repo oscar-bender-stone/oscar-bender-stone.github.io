@@ -1,12 +1,19 @@
 /* SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> */
 /* SPDX-License-Identifier: MIT */
 
+.about-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px
+}
+
 .circle-image {
   float: left;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: fill;
+  overflow-inline: hidden;
 }
 
 /* Backup in case image doesn't load. */
