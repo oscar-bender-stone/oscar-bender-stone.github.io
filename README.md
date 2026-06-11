@@ -20,11 +20,5 @@ under [MIT](./LICENSES/MIT) or [CC0-1.0](./LICENSES/CC0-1.0.txt).
 
 This website is made through simple HTML generation. To generate files, make
 sure to have [`just`](https://github.com/casey/just) and
-[`pandoc`](https://pandoc.org) installed.
-
-Full generation: `just` or `just all`.
-
-Specific options:
-
-- Index: `just index`.
-- Publications: `just bibtex`.
+[`pandoc`](https://pandoc.org) installed. Then run `just` or `just build`. Smart
+caching is included, so it should only update HTML when markdown is changed

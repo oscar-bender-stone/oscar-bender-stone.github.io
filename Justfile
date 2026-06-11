@@ -1,22 +1,32 @@
 # SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com>
 # SPDX-License-Identifier: MIT
 
-all: index bibtex
+# Include copyright generation here
+# to avoid REUSE errors.
+copyright := "SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com"
+license := "SPDX-License-" + "Identifier: " + "MIT"
 
-index:
-    pandoc markdown/index.md -s \
-      --include-before-body=./source/templates/_navigation.html \
-      -f markdown -t html -o docs/index.html
+default: build
 
-bibtex:
-    pandoc -f markdown -t html ./markdown/publications.md \
-    -s --citeproc \
-    -o docs/publications.html \
-    --csl=./assets/csl/acm.csl \
-    --bibliography=./assets/publications.bib \
-    --metadata title="Publications" \
-    --metadata copyright="SPDX-FileCopyrightText: Copyright (c) 202 Oscar Bender-Stone <oscar-bender-stone@protonmail.com>" \
-    # REUSE will complain \
-    # if we leave this \
-    # as one line. \
-    --metadata license="SPDX-License-" "Identifier: MIT" \
+# Iterate over all files in markdown
+# and check time-stamp for changes
+build:
+    @echo "Checking for modified files..."
+
+    @find markdown -name "*.md" -exec sh -c ' \
+        for file; do \
+            stem=$(basename "$file" .md); \
+            target="docs/$stem.html"; \
+            if [ ! -f "$target" ] || [ "$file" -nt "$target" ]; then \
+                echo "   Compiling $src ──> $target (Modified)"; \
+                pandoc "$file" -d pandoc-config.yaml \
+                    --metadata license="{{ license }}" \
+                    --metadata copyright="{{ copyright }}" \
+                    -o "$target"; \
+            fi; \
+        done' _ {} +
+    @echo "Build complete."
+
+clean:
+    @echo "Removing generated HTML files..."
+    rm -f docs/*.html
