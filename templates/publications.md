@@ -1,5 +1,4 @@
 ---
-title: "Publications"
 nocite: "@*"
 include-before: |
   <div style="text-align: center; margin-bottom: 20px;">
