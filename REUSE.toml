@@ -1,11 +1,18 @@
+# SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com>
+# SPDX-License-Identifier: MIT
+
 version = 3
 
 [[annotations]]
-path = ["assets/publications.bib", "templates/*"]
+path = ["templates/index.md"]
 SPDX-FileCopyrightText = "Copyright (c) 2026 Oscar Bender-Stone"
-SPDX-License-Identifier = "CC0-1.0"
+SPDX-License-Identifier = "LicenseRef-Proprietary"
 
 [[annotations]]
-path = ["assets/icons/favicon.ico", "assets/images/headshot.jpg"]
-SPDX-FileCopyrightText = "Copyright (c) 2026 Oscar Bender-Stone. All Rights Reserved."
-SPDX-License-Identifier = "NONE"
+path = [
+  "assets/publications.bib",
+  "templates/*.html",
+  "templates/publications.md",
+]
+SPDX-FileCopyrightText = "Copyright (c) 2026 Oscar Bender-Stone"
+SPDX-License-Identifier = "CC0-1.0"
