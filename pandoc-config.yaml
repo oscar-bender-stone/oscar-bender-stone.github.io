@@ -10,9 +10,10 @@ citeproc: true
 # TODO: ensure this can
 # be overriden on a per file basis.
 # (Useful for blogs.)
+csl: "./assets/csl/acm.csl"
 bibliography: [./assets/publications.bib]
 metadata-files:
-  - bibtex-metadata.yaml
+  - pandoc-metadata.yaml
 
 # Styling and templates
 # Use path relative to *docs*,
