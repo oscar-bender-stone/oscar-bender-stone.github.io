@@ -8,6 +8,8 @@ license := "SPDX-License-" + "Identifier: " + "MIT"
 
 default: build
 
+rebuild: clean build
+
 # Iterate over all files in markdown
 # and check time-stamp for changes
 build:
