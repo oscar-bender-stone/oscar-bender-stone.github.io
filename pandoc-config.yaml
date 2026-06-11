@@ -15,5 +15,7 @@ metadata:
   nocite: "@*"
 
 # Styling and templates
-css: [style.css]
+# Use path relative to *docs*,
+# not project root
+css: [../source/css/style.css]
 include-before-body: [source/templates/_navigation.html]
