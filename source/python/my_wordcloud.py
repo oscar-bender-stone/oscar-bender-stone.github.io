@@ -5,8 +5,8 @@
 # TODO: adjust palette as needed
 
 import json
+import random
 
-import matplotlib.colors
 from wordcloud import WordCloud
 
 # WARNING: relative path is based on
@@ -23,17 +23,36 @@ palette = {
     "yellow": "#ecbe7b",
     "green": "#98be65",
     "blue": "#51afef",
-    "sky": "#d1e0ff",
     "orchid": "#be95ff",
     "purple": "#A2A1FF",
     "magenta": "#e492ff",
 }
 
-colormap = matplotlib.colors.LinearSegmentedColormap.from_list(
-    "doom_one", list(palette.values()), N=len(palette)
-)
+
+class ColorManager:
+    """
+    Manages colors used in word cloud. Ensures that every color is used at least once (if enough words are available).
+    """
+
+    def __init__(self, palette: dict[str, str]):
+        self.palette = list(palette.values())
+        self.pool = self.palette.copy()
+
+    # color_func API reference: http://amueller.github.io/word_cloud/generated/wordcloud.WordCloud.html#wordcloud.WordCloud
+    def get_color(self, *args, **kwargs):
+
+        # When colors in pool run out,
+        # reshuffle and start again
+        if not self.pool:
+            self.pool = list(self.palette)
+            random.shuffle(self.pool)
+
+        return self.pool.pop()
+
+
+colormanager = ColorManager(palette)
 
 wordcloud = WordCloud(
-    background_color="white", colormap=colormap
+    background_color="white", color_func=colormanager.get_color
 ).generate_from_frequencies(word_counts)
 wordcloud.to_file("./assets/images/interests_cloud.png")
