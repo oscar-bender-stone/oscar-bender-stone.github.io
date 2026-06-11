@@ -4,15 +4,15 @@
 version = 3
 
 [[annotations]]
-path = ["templates/index.md"]
+path = ["markdown/index.md", "docs/*"]
 SPDX-FileCopyrightText = "Copyright (c) 2026 Oscar Bender-Stone"
 SPDX-License-Identifier = "LicenseRef-Proprietary"
 
 [[annotations]]
 path = [
   "assets/publications.bib",
-  "templates/*.html",
-  "templates/publications.md",
+  "source/templates/*.html",
+  "markdown/publications.md",
 ]
 SPDX-FileCopyrightText = "Copyright (c) 2026 Oscar Bender-Stone"
 SPDX-License-Identifier = "CC0-1.0"
