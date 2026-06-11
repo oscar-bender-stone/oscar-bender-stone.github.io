@@ -2,8 +2,9 @@
 # SPDX-License-Identifier: MIT
 
 bibtex:
-    pandoc -f bibtex -t html -s  \
-      --csl=assets/csl/acm.csl \\
-      --citeproc \
-      --metadata nocite="@*" \
-      ./assets/publications.bib -o test.html
+    pandoc -f markdown -t html ./templates/publications.md \
+    -s --citeproc \
+    -o docs/publications.html \
+    --bibliography=./assets/publications.bib \
+    --metadata copyright="SPDX-FileCopyrightText: Copyright (c) 202 Oscar Bender-Stone <oscar-bender-stone@protonmail.com>" \
+    --metadata license="SPDX-License-Identifier: MIT" \
