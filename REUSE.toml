@@ -14,6 +14,7 @@ path = [
   "assets/stopwords.txt",
   "source/templates/*.html",
   "source/python/uv.lock",
+  "source/python/.python-version",
   "markdown/publications.md",
 ]
 SPDX-FileCopyrightText = "Copyright (c) 2026 Oscar Bender-Stone"
