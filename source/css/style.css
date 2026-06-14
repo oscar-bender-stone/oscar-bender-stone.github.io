@@ -53,6 +53,21 @@ small {
   border-radius: 0;
 }
 
+.navbar {
+  display: flex;
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.navbox {
+  display: inline-block;
+}
+
+.navbox:hover {
+  color: hotpink;
+}
+
 .row {
   display: flex;
   align-items: flex-start;
