@@ -4,9 +4,8 @@
 # Oscar Bender-Stone
 
 <div class="row" markdown="1">
-![2026 Copyright Oscar Bender-Stone. All Rights Reserved.](../assets/images/headshot.jpg){alt="Professional
+![](../assets/images/headshot.jpg){alt="Professional
 Headshot" .circle-image}
-
 <div markdown="1">
 
 Hello! I am an incoming graduate student at the

@@ -33,3 +33,7 @@
 .column {
   flex: 50%;
 }
+
+small {
+  color: #000000
+}
