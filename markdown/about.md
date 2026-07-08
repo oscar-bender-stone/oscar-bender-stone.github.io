@@ -3,8 +3,6 @@
 
 <div class="row" markdown="1">
 
-# Oscar Bender-Stone
-
 <div class="column" markdown="1">
 
 <div markdown="1">
@@ -20,8 +18,6 @@ Address: TBD
 </div>
 
 <div markdown="1">
-
-# About
 
 Hello! I am an incoming graduate student at the
 [University of Iowa](https://cs.uiowa.edu) advised by
