@@ -121,6 +121,7 @@ small {
   align-items: flex-start;
   gap: 20px;
   padding-block: 10px;
+  padding-left: 10px;
   border: var(--border);
   background-color: var(--dark-blue)
 }
@@ -130,5 +131,4 @@ small {
   border: var(--border);
   background-color: var(--dark-blue);
   gap: 10px;
-
 }
