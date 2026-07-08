@@ -30,11 +30,15 @@ build-dir dir="markdown" target="pages":
 build-main:
     @just build-dir markdown pages
 
+build-blog:
+    @just build-dir markdown/blog/posts pages/blog/posts
+
 # Iterate over all files in markdown
 # and check time-stamp for changes
 build:
     @echo "Checking for modified files..."
     @just build-main
+    @just build-blog
     @echo "Build complete."
 
 clean:
