@@ -65,7 +65,6 @@ small {
   width: 200px;
   height: 200px;
   flex-shrink: 0;
-  border: 5px solid var(--dark-blue-1);
   border-radius: 50%;
   background-color: var(--dark-blue-1);
 }
@@ -117,16 +116,19 @@ small {
   color: #FFF
 }
 
-.row {
+.column {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   padding-block: 10px;
+  border: var(--border);
   background-color: var(--dark-blue)
 }
 
-.column {
+.row {
   flex: 50%;
   border: var(--border);
+  background-color: var(--dark-blue);
   gap: 10px;
+
 }
