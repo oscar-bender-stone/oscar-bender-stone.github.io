@@ -60,13 +60,16 @@ small {
 
 .circle-image {
   float: left;
+  overflow: hidden;
+  object-fit: cover;
   width: 200px;
   height: 200px;
-  border-radius: 50%;
-  object-fit: fill;
-  overflow-inline: hidden;
   flex-shrink: 0;
+  border: 5px solid var(--dark-blue-1);
+  border-radius: 50%;
+  background-color: var(--dark-blue-1);
 }
+
 
 /* Backup in case image doesn't load. */
 .circle-image:after {
