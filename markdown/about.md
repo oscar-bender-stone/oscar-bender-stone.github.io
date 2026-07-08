@@ -11,6 +11,10 @@
 
 ![](../assets/images/headshot.jpg){alt="Professional Headshot" .circle-image}
 
+**University of Iowa**
+
+Address: TBD
+
 **Email:** [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu)
 
 </div>
