@@ -13,11 +13,10 @@
 
 </div>
 
-**University of Iowa**
-
-Address: TBD
-
-**Email:** [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu)
+| University of Iowa                                                 |
+| ------------------------------------------------------------------ |
+| **Address:** TBD                                                   |
+| **Email:** [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu) |
 
 </div>
 
