@@ -41,6 +41,9 @@ build:
     @just build-blog
     @echo "Build complete."
 
+# For security, we avoid recursive flag (r) in rm
 clean:
     @echo "Removing generated HTML files..."
     rm -f pages/*.html
+    rm -f pages/blog/*.html
+    rm -f pages/blog/posts/*.html
