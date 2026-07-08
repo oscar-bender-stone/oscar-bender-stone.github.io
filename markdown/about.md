@@ -4,9 +4,7 @@
 # About
 
 <div class="my-column" markdown="1">
-
 <div class="my-row" markdown="1">
-
 <div markdown="1">
 
 <div markdown="1">
@@ -40,13 +38,6 @@ I earned my undergraduate degree at the
 [University of Colorado at Boulder](https://www.colorado.edu); I worked in the
 [CUPLV Lab](https://plv.colorado.edu) and the
 [Math department](https://www.colorado.edu/math/).
-
-</div>
-</div>
-
-<div class="my-row" markdown="1">
-
-<div markdown="1">
 
 ## Interests
 
