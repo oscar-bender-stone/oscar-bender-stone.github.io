@@ -1,7 +1,7 @@
 <!-- SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> -->
 <!-- SPDX-License-Identifier: LicenseRef-Proprietary -->
 
-# About Me
+# About
 
 <div class="row" markdown="1">
 
@@ -9,7 +9,11 @@
 
 <div markdown="1">
 
+<div markdown="1">
+
 ![](../assets/images/headshot.jpg){alt="Professional Headshot" .circle-image}
+
+</div>
 
 **University of Iowa**
 
