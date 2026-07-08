@@ -62,7 +62,8 @@ p {
 /*   padding: 20px; */
 /* } */
 
-h1 {
+h1,
+h2 {
   background-color: var(--dark-blue-1);
   color: white;
   padding: 20px;
@@ -75,7 +76,12 @@ h1 {
   justify-content: flex-start;
 }
 
-h1::after {
+h2 {
+  background-color: var(--dark-blue-2)
+}
+
+h1::after,
+h2::after {
   content: "";
   flex-grow: 1;
   height: 4px;
@@ -91,6 +97,10 @@ body {
 
 small {
   color: #000000
+}
+
+.site-title {
+  background-color: var(--white) !important;
 }
 
 .skip {
