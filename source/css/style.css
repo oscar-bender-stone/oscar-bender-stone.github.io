@@ -37,11 +37,23 @@
 h1 {
   background-color: var(--dark-blue-1);
   color: white;
-  margin: 0;
   padding: 20px;
   margin: 0;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1::after {
+  content: "";
+  flex-grow: 1;
+  height: 4px;
+  background-color: var(--white);
+  margin-left: 20px;
+  border-radius: 2px;
 }
 
 body {
