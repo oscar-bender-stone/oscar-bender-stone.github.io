@@ -112,6 +112,12 @@ small {
   padding: 3px;
 }
 
+/* TODO :make sure this doesn't break other colors! */
+a {
+  text-decoration: inherit;
+  color: var(--dark-blue-1);
+}
+
 .site-title {
   background-color: var(--white) !important;
 }
