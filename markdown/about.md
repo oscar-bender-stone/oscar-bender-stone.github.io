@@ -6,19 +6,20 @@
 <div class="my-column" markdown="1">
 <div class="my-row" markdown="1">
 <div markdown="1">
+
 <div markdown="1">
 
 ![](../assets/images/headshot.jpg){alt="Professional Headshot" .circle-image}
 
 </div>
 
-**University of Iowa**
-
-Address: TBD
-
-**Email:** [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu)
+| University of Iowa                                                 |
+| ------------------------------------------------------------------ |
+| **Address:** TBD                                                   |
+| **Email:** [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu) |
 
 </div>
+
 <div markdown="1">
 
 Hello! I am an incoming graduate student at the
@@ -36,13 +37,6 @@ I earned my undergraduate degree at the
 [University of Colorado at Boulder](https://www.colorado.edu); I worked in the
 [CUPLV Lab](https://plv.colorado.edu) and the
 [Math department](https://www.colorado.edu/math/).
-
-</div>
-</div>
-
-<div class="my-row" markdown="1">
-
-<div markdown="1">
 
 ## Interests
 
