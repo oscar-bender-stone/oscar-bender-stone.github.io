@@ -21,11 +21,12 @@
   --font-primary: "Atkinson Hyperlegible Next", sans-serif;
   --border: 5px solid var(--dark-blue-1);
   --dark-blue-1: #2A4FAB;
-  --dark-blue-2: #2A4FAB;
+  --dark-blue-2: #153885;
+  --dark-blue-3: #002160;
+  --tab-width: 15px;
   --white: #fff;
+  --black: #000;
 }
-
-
 
 * {
   margin: 0;
@@ -137,8 +138,7 @@ small {
   display: flex;
   align-items: flex-start;
   position: relative;
-  gap: 5px;
-  padding-block-end: 10px;
+  background-color: var(dark-blue-1)
 }
 
 /* TODO: improve these buttons! */
@@ -146,24 +146,36 @@ small {
   display: inline-block;
   text-decoration: none;
   border-radius: 1px;
-  border: var(--border);
-  gap: 10px;
+  /* Tab-like feeling */
+  border-top-left-radius: var(--tab-width);
+  border-top-right-radius: var(--tab-width);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-color: var(--dark-blue-3);
+  border-style: solid;
+
   padding-inline: 20px;
   padding-block: 20px;
+  gap: 10px;
   font-size: 20px;
   font-weight: bold;
-  user-select: none;
   background-color: var(--white);
 }
 
 .navbox:visited {
-  color: #000;
+  color: var(--black)
 }
 
 .navbox:hover {
   background-color: var(--dark-blue-1);
-  border-color: var(--white);
-  color: #FFF
+  color: #FFF;
+  box-shadow: inset 0 0 0 3px var(--white);
+}
+
+.navbox:focus-visible {
+  outline: 3px solid var(--dark-blue-1);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--white);
 }
 
 .my-row {
