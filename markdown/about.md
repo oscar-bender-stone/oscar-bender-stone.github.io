@@ -4,8 +4,11 @@
 # About
 
 <div class="my-column" markdown="1">
+
 <div class="my-row" markdown="1">
+
 <div markdown="1">
+
 <div markdown="1">
 
 ![](../assets/images/headshot.jpg){alt="Professional Headshot" .circle-image}
@@ -19,6 +22,7 @@ Address: TBD
 **Email:** [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu)
 
 </div>
+
 <div markdown="1">
 
 Hello! I am an incoming graduate student at the
