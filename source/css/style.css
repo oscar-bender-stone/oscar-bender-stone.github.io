@@ -200,3 +200,32 @@ small {
 .my-col:last-of-type {
   border: var(--border);
 }
+
+@media screen and (max-width: 768px) {
+  .my-row {
+    flex-direction: column;
+  }
+
+  .my-col {
+    width: 100%;
+  }
+
+  p,
+  a,
+  span,
+  strong,
+  h2 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .my-col:first-of-type {
+    box-shadow:
+      inset var(--border-width) var(--border-width) var(--border-width) 0 var(--border-color);
+  }
+
+  .my-col:last-of-type {
+    box-shadow:
+      inset var(--border-width) 0 var(--border-width) var(--border-width) var(--border-color);
+  }
+}
