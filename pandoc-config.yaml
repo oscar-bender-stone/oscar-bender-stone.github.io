@@ -21,5 +21,3 @@ metadata-files:
 css: [../source/css/style.css]
 include-before-body: [source/templates/_header.html]
 include-after-body: [source/templates/_footer.html]
-filters:
-  - source/lua/wrap-main.lua
