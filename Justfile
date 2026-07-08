@@ -31,6 +31,7 @@ build-main:
     @just build-dir markdown pages
 
 build-blog:
+    @just build-dir markdown/blog pages/blog
     @just build-dir markdown/blog/posts pages/blog/posts
 
 # Iterate over all files in markdown
