@@ -51,11 +51,32 @@
   <link rel="stylesheet" href="../source/css/style.css" />
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar">
-  <a href="about.html" class="navbox"> About </a>
-  <a href="publications.html" class="navbox"> Publications </a>
-</nav>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<style>
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+</style>
+
+<header>
+  <nav class="navbar">
+    <a href="about.html" class="navbox"> About </a>
+    <a href="publications.html" class="navbox"> Publications </a>
+  </nav>
+</header>
+
+<main>
 <header id="title-block-header">
 <h1 class="title">Publications</h1>
 </header>
@@ -69,6 +90,8 @@ Aftermath: <span>Building</span> community with <span>COSMOS</span>.
 href="https://doi.org/10.1080/10724117.2024.2421733">https://doi.org/10.1080/10724117.2024.2421733</a></div>
 </div>
 </div>
+</main>
+
 <footer>
   <small>
     Copyright © 2026 Oscar Bender-Stone.

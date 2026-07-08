@@ -31,11 +31,32 @@
   <link rel="stylesheet" href="../source/css/style.css" />
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar">
-  <a href="about.html" class="navbox"> About </a>
-  <a href="publications.html" class="navbox"> Publications </a>
-</nav>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<style>
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+</style>
+
+<header>
+  <nav class="navbar">
+    <a href="about.html" class="navbox"> About </a>
+    <a href="publications.html" class="navbox"> Publications </a>
+  </nav>
+</header>
+
+<main>
 <!-- SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> -->
 <!-- SPDX-License-Identifier: LicenseRef-Proprietary -->
 <div class="column" data-markdown="1">
@@ -69,6 +90,8 @@ alt="Interests wordcloud." /><br />
 <h3 id="program-reuse">Program Reuse</h3>
 <h3 id="bootstrapping">Bootstrapping</h3>
 </div>
+</main>
+
 <footer>
   <small>
     Copyright © 2026 Oscar Bender-Stone.
