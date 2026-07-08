@@ -1,4 +1,4 @@
-Copyright (c) Oscar Bender-Stone. All rights reserved.
+Copyright (c) 2026 Oscar Bender-Stone.
 
 Commercial use, reproduction, or distribution of this material 
 is strictly prohibited without prior written permission.
