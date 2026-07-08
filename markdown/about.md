@@ -1,11 +1,14 @@
 <!-- SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> -->
 <!-- SPDX-License-Identifier: LicenseRef-Proprietary -->
 
+<div class="column" markdown="1">
+
 # Oscar Bender-Stone
 
 <div class="row" markdown="1">
-![](../assets/images/headshot.jpg){alt="Professional
-Headshot" .circle-image}
+
+![](../assets/images/headshot.jpg){alt="Professional Headshot" .circle-image}
+
 <div markdown="1">
 
 Hello! I am an incoming graduate student at the
@@ -24,13 +27,18 @@ Email: [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu).
 
 </div>
 </div>
+</div>
 
+<div>
 ## Interests
 
+<div class="row" markdown="1">
 ![](../assets/images/interests_cloud.png){alt="Interests wordcloud."}\
 
 ### Program Reuse
 
 ### Bootstrapping
+
+</div>
 
 </div>
