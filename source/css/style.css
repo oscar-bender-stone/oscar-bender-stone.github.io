@@ -25,6 +25,20 @@
   --white: #fff;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
 /* nav { */
 /*   display: flex; */
 /*   gap: 15 px; */
@@ -139,18 +153,23 @@ small {
   color: #FFF
 }
 
-.column {
+.my-row {
   display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex: 50%;
+  gap: 10px;
+  margin: 0;
+  gap: 10px;
+}
+
+.my-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   align-items: flex-start;
   gap: 20px;
   padding-block: 10px;
   padding-left: 10px;
   border: var(--border);
-  background-color: var(--dark-blue)
-}
-
-.row {
-  flex: 50%;
-  background-color: var(--dark-blue);
-  gap: 10px;
 }

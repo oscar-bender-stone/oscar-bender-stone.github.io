@@ -3,9 +3,9 @@
 
 # About
 
-<div class="row" markdown="1">
+<div class="my-column" markdown="1">
 
-<div class="column" markdown="1">
+<div class="my-row" markdown="1">
 
 <div markdown="1">
 
@@ -44,7 +44,7 @@ I earned my undergraduate degree at the
 </div>
 </div>
 
-<div class="column" markdown="1">
+<div class="my-row" markdown="1">
 
 <div markdown="1">
 
