@@ -53,6 +53,10 @@ p {
   margin-top: 0;
 }
 
+p {
+  margin-bottom: 1.5rem;
+}
+
 /* nav { */
 /*   display: flex; */
 /*   gap: 15 px; */
