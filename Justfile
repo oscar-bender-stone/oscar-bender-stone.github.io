@@ -23,21 +23,18 @@ wordcloud:
     @uv --project ./source/python \
       run ./source/python/my_wordcloud.py 
 
-build_page file:
-    @target="pages/$(basename "{{ file }}" .md).html"; \
-     if [ ! -f "$target" ] || [ "{{ file }}" -nt "$target" ]; then \
-         echo " Compiling {{ file }} ──> $target"; \
-         pandoc "{{ file }}" -d pandoc-config.yaml \
-             -M license="{{ license }}" \
-             -M copyright="{{ copyright }}" \
-             -o "$target"; \
-     fi
+build-dir dir="markdown" target="pages":
+    @mkdir -p {{ target }}
+    @find {{ dir }} -maxdepth 1 -name "*.md" -exec ./scripts/build-page.sh {} {{ target }} \;
+
+build-main:
+    @just build-dir markdown pages
 
 # Iterate over all files in markdown
 # and check time-stamp for changes
 build:
     @echo "Checking for modified files..."
-    @find markdown -name "*.md" -exec just build_page {} \;
+    @just build-main
     @echo "Build complete."
 
 clean:
