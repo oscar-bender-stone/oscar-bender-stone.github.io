@@ -25,13 +25,35 @@
   --white: #fff;
 }
 
-nav {
+/* nav { */
+/*   display: flex; */
+/*   gap: 15 px; */
+/* } */
+
+/* main { */
+/*   padding: 20px; */
+/* } */
+
+h1 {
+  background-color: var(--dark-blue-1);
+  color: white;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
   display: flex;
-  gap: 15 px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-main {
-  padding: 20px;
+h1::after {
+  content: "";
+  flex-grow: 1;
+  height: 4px;
+  background-color: var(--white);
+  margin-left: 20px;
+  border-radius: 2px;
 }
 
 body {
@@ -43,15 +65,33 @@ small {
   color: #000000
 }
 
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
 .circle-image {
   float: left;
+  overflow: hidden;
+  object-fit: cover;
   width: 200px;
   height: 200px;
-  border-radius: 50%;
-  object-fit: fill;
-  overflow-inline: hidden;
   flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--dark-blue-1);
+  border: var(--border)
 }
+
 
 /* Backup in case image doesn't load. */
 .circle-image:after {
@@ -99,16 +139,18 @@ small {
   color: #FFF
 }
 
-.row {
+.column {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   padding-block: 10px;
+  padding-left: 10px;
+  border: var(--border);
   background-color: var(--dark-blue)
 }
 
-.column {
+.row {
   flex: 50%;
-  border: var(--border);
+  background-color: var(--dark-blue);
   gap: 10px;
 }
