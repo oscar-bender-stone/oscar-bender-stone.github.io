@@ -25,6 +25,15 @@
   --white: #fff;
 }
 
+nav {
+  display: flex;
+  gap: 15 px;
+}
+
+main {
+  padding: 20px;
+}
+
 body {
   font-family: var(--font-primary);
   font-size: 18px;
