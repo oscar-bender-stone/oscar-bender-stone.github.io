@@ -243,6 +243,10 @@ a {
   border: var(--border);
 }
 
+.blog-list {
+  border: var(--border)
+}
+
 @media screen and (max-width: 768px) {
   .my-row {
     flex-direction: column;
