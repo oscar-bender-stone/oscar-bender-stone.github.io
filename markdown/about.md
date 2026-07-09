@@ -26,15 +26,14 @@ Hello! I am an incoming graduate student at the
 [University of Iowa](https://cs.uiowa.edu) advised by
 [Garrett Morris](https://jgbm.github.io).
 
-I study Programming Languages. Specifically, I'm working on
-[**program reuse**](program-reuse) and [**bootstrapping**](bootstrapping). I
-like to incorporate theoretical ideas, especially from mathematical logic and
-computability theory.
+I study Programming Languages. Specifically, I'm working on **program reuse**and
+**bootstrapping** I like to incorporate theoretical ideas, especially from
+mathematical logic and computability theory.
 
 ## Previous Affilations
 
-I earned my undergraduate degree at the
-[University of Colorado at Boulder](https://www.colorado.edu); I worked in the
+**Undergraduate:** I studied at the
+[University of Colorado at Boulder](https://www.colorado.edu), I worked in the
 [CUPLV Lab](https://plv.colorado.edu) and the
 [Math department](https://www.colorado.edu/math/).
 
