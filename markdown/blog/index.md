@@ -1,5 +1,8 @@
 ---
 is-blog: true
+posts:
+  - title: "Test"
+  - title: "Test 2"
 ---
 
 # Blog

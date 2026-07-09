@@ -37,6 +37,8 @@ build-blog:
 # Iterate over all files in markdown
 # and check time-stamp for changes
 build:
+    # TODO: add symlink to source/css
+    # for easier local testing
     cp -r source/css pages/
     @echo "Checking for modified files..."
     @just build-main
