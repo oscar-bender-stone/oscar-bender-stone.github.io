@@ -18,7 +18,7 @@ else
 fi
 
 # Set output folder
-OUT_DIR="pages${RELATIVE_DIR}"
+OUT_DIR="pages/${RELATIVE_DIR}"
 
 echo "RELATIVE_DIR: $RELATIVE_DIR"
 echo "OUT_DIR: $OUT_DIR"
