@@ -2,7 +2,8 @@
 is-blog: true
 posts:
   - title: "Test"
-  - title: "Test 2"
+    date: "08-07-2026"
+    path: "intro.html"
 ---
 
 # Blog
