@@ -12,9 +12,8 @@ Dates: 2026-Present.
 
 ## License
 
-No unauthorized distribution of the content of the markdown files without
-permission [./LICENSES/LicenseRef-Proprietary.txt]. Certain files are licensed
-under [MIT](./LICENSES/MIT) or [CC0-1.0](./LICENSES/CC0-1.0.txt).
+Except where noted, no unauthorized distribution of the content of the markdown
+files without permission [./LICENSES/LicenseRef-Proprietary.txt].
 
 ## Generation
 

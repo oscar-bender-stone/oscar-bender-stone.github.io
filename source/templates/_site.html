@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$if(title)$$title$$else$My Site$endif$</title>
+  <link rel="stylesheet" href="${root}css/style.css" />
+</head>
+
+
+<header>
+  <h2 id="site-title">Oscar Bender-Stone</h2>
+
+  <nav class="navbar">
+    <a href="${root}about.html" class="navbox">About</a>
+    <a href="${root}publications.html" class="navbox">Publications</a>
+    <a href="${root}blog/index.html" class="navbox">Blog</a>
+  </nav>
+</header>
+
+<body>
+  <main>
+    $if(title)$<h1>$title$</h1>$endif$
+    $body$
+  </main>
+  <footer>
+    <small>
+      Copyright © 2026 Oscar Bender-Stone.
+    </small>
+  </footer>
+</body>
+
+</html>
