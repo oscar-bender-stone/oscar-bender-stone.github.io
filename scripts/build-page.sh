@@ -20,9 +20,6 @@ fi
 # Set output folder
 OUT_DIR="pages/${RELATIVE_DIR}"
 
-echo "RELATIVE_DIR: $RELATIVE_DIR"
-echo "OUT_DIR: $OUT_DIR"
-
 # Set output file path
 SRC_STEM=$(basename "$SRC_FILE" .md)
 OUT_FILE="$OUT_DIR/$SRC_STEM.html"
