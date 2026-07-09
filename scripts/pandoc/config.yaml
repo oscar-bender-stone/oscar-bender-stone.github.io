@@ -4,6 +4,7 @@
 from: markdown
 to: html
 standalone: true
+template: "./source/templates/_page.html"
 
 # Setup citations
 citeproc: true
@@ -14,9 +15,3 @@ csl: "./assets/csl/acm.csl"
 bibliography: [./assets/publications.bib]
 metadata-files:
   - ./scripts/pandoc/metadata.yaml
-
-# Styling and templates
-# Use path relative to *docs*,
-# not project root
-css: [../source/css/style.css]
-template: "./source/templates/_site.html"
