@@ -8,13 +8,18 @@
   <link rel="stylesheet" href="${root}/source/css/style.css" />
 </head>
 
-<body>
-  <nav class="site-nav">
-    <a href="${root}/pages/about.html">About</a>
-    <a href="${root}/pages/publications.html">Publications</a>
-    <a href="${root}/pages/blog/index.html">Blog</a>
-  </nav>
 
+<header>
+  <h2 id="site-title">Oscar Bender-Stone</h2>
+
+  <nav class="navbar">
+    <a href="${root}about.html" class="navbox">About</a>
+    <a href="${root}publications.html" class="navbox">Publications</a>
+    <a href="${root}blog/index.html" class="navbox">Blog</a>
+  </nav>
+</header>
+
+<body>
   <main>
     $if(title)$<h1>$title$</h1>$endif$
     $body$

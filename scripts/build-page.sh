@@ -32,7 +32,7 @@ if [ ! -f "$TARGET" ] || [ "$SRC_FILE" -nt "$TARGET" ]; then
   ROOT_PREFIX=""
   COUNTER="$SLASHES"
   while [ "$COUNTER" -gt 0 ]; do
-    ROOT_PREFIX=$(printf '%s.' "$ROOT_PREFIX")
+    ROOT_PREFIX=$(printf '%s../' "$ROOT_PREFIX")
     COUNTER=$((COUNTER - 1))
   done
 
