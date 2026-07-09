@@ -10,8 +10,11 @@ SRC_FILE="$1"
 # extra slashes and dots!
 SRC_DIR=$(dirname "$SRC_FILE")
 RELATIVE_DIR=${SRC_DIR#markdown}
+
 if [ "$RELATIVE_DIR" = "/." ]; then
   RELATIVE_DIR=""
+else
+  RELATIVE_DIR="${RELATIVE_DIR#/}"
 fi
 
 # Set output folder
@@ -36,23 +39,19 @@ if [ ! -f "$TARGET" ] || [ "$SRC_FILE" -nt "$TARGET" ]; then
   # Find number of dots needed
   if [ -z "$RELATIVE_DIR" ]; then
     SLASHES=0
+    ROOT_PREFIX="./"
   else
     SLASHES=$(printf '%s' "$RELATIVE_DIR" | tr -cd "/" | wc -m)
-    # First folder in relative path
-    # counts as a slash
-    SLASHES=$((SLASHES + 1))
-  fi
 
-  # Get start of relative path
-  ROOT_PREFIX=""
-  COUNTER="$SLASHES"
-  while [ "$COUNTER" -gt 0 ]; do
-    ROOT_PREFIX=$(printf '%s../' "$ROOT_PREFIX")
-    COUNTER=$((COUNTER - 1))
-  done
+    # Get start of relative path
+    ROOT_PREFIX=""
+    COUNTER="$SLASHES"
+    while [ "$COUNTER" -gt 0 ]; do
+      ROOT_PREFIX=$(printf '%s../' "$ROOT_PREFIX")
+      COUNTER=$((COUNTER - 1))
+    done
 
-  if [ -z "$ROOT_PREFIX" ]; then
-    ROOT_PREFIX="./"
+    ROOT_PREFIX="../$ROOT_PREFIX"
   fi
 
   pandoc "$SRC_FILE" -d ./scripts/pandoc/config.yaml \

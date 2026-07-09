@@ -1,3 +1,1 @@
----
-css: .../../source/css/style.css
----
+# Blog
