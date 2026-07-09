@@ -37,6 +37,7 @@ build-blog:
 # Iterate over all files in markdown
 # and check time-stamp for changes
 build:
+    cp -r source/css pages/
     @echo "Checking for modified files..."
     @just build-main
     @just build-blog
@@ -45,6 +46,7 @@ build:
 # For security, we avoid recursive flag (r) in rm
 clean:
     @echo "Removing generated HTML files..."
+    rm -rf pages/css/*.css
     rm -f pages/*.html
     rm -f pages/blog/*.html
     rm -f pages/blog/posts/*.html

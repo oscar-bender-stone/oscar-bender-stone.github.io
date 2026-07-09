@@ -1,0 +1,273 @@
+/* SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> */
+/* SPDX-License-Identifier: MIT */
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("assets/fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("assets/fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-primary: "Atkinson Hyperlegible Next", sans-serif;
+  --border: 5px solid var(--dark-blue-1);
+  --dark-blue-1: #2A4FAB;
+  --dark-blue-2: #153885;
+  --dark-blue-3: #002160;
+  --tab-width: 15px;
+  --white: #fff;
+  --black: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  max-width: 100% !important;
+  overflow-x: hidden;
+  background-color: var(--white);
+}
+
+h1,
+h2,
+h3,
+header,
+p {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* nav { */
+/*   display: flex; */
+/*   gap: 15 px; */
+/* } */
+
+/* main { */
+/*   padding: 20px; */
+/* } */
+
+h1,
+h2 {
+  background-color: var(--dark-blue-1);
+  color: white;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h2 {
+  background-color: var(--dark-blue-2)
+}
+
+h1::after,
+h2::after {
+  content: "";
+  flex-grow: 1;
+  height: 4px;
+  background-color: var(--white);
+  margin-left: 20px;
+  border-radius: 2px;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 18px;
+}
+
+
+html,
+footer {
+  background-color: var(--dark-blue-1)
+}
+
+/* TODO: make copyright notice look nicer! */
+small {
+  color: var(--dark-blue-3);
+  background-color: var(--white);
+  padding: 3px;
+}
+
+/* TODO :make sure this doesn't break other colors! */
+a {
+  text-decoration: inherit;
+  color: var(--dark-blue-1);
+}
+
+.site-title {
+  background-color: var(--white) !important;
+}
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.circle-image {
+  float: left;
+  overflow: hidden;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--dark-blue-1);
+  border: var(--border)
+}
+
+
+/* Backup in case image doesn't load. */
+.circle-image:after {
+  content: attr(alt);
+  user-select: text;
+  display: block;
+  position: absolute;
+  top: 210px;
+  left: 0;
+  width: 100%;
+  color: #333;
+  border-radius: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  background-color: var(--dark-blue-1);
+  gap: 3px;
+}
+
+/* TODO: improve these buttons! */
+.navbox {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 1px;
+  /* Tab-like feeling */
+  border-top-left-radius: var(--tab-width);
+  border-top-right-radius: var(--tab-width);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-color: var(--white);
+  border-style: solid;
+
+  padding-inline: 20px;
+  padding-block: 20px;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--white);
+}
+
+.navbox:visited {
+  color: var(--dark-blue-1)
+}
+
+.navbox:hover {
+  background-color: var(--dark-blue-1);
+  color: #FFF;
+  box-shadow: inset 0 0 0 1px var(--white);
+}
+
+.navbox:focus-visible {
+  outline: 3px solid var(--dark-blue-1);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--white);
+}
+
+.my-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex: 50%;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.my-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 20px;
+  padding-block: 10px;
+  padding-left: 10px;
+  border: var(--border);
+}
+
+.my-col img {
+  max-width: 100%;
+  height: auto;
+}
+
+.my-col:first-of-type {
+  border: var(--border);
+}
+
+.my-col:last-of-type {
+  border: var(--border);
+}
+
+@media screen and (max-width: 768px) {
+  .my-row {
+    flex-direction: column;
+  }
+
+  .my-col {
+    width: 100%;
+  }
+
+  p,
+  a,
+  span,
+  strong,
+  h2 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .my-col:first-of-type {
+    box-shadow:
+      inset var(--border-width) var(--border-width) var(--border-width) 0 var(--border-color);
+  }
+
+  .my-col:last-of-type {
+    box-shadow:
+      inset var(--border-width) 0 var(--border-width) var(--border-width) var(--border-color);
+  }
+}
