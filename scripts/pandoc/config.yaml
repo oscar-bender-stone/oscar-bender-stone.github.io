@@ -13,11 +13,10 @@ citeproc: true
 csl: "./assets/csl/acm.csl"
 bibliography: [./assets/publications.bib]
 metadata-files:
-  - pandoc-metadata.yaml
+  - ./scripts/pandoc/metadata.yaml
 
 # Styling and templates
 # Use path relative to *docs*,
 # not project root
 css: [../source/css/style.css]
-include-before-body: [source/templates/_header.html]
-include-after-body: [source/templates/_footer.html]
+template: "./source/templates/_site.html"

@@ -23,16 +23,16 @@ wordcloud:
     @uv --project ./source/python \
       run ./source/python/my_wordcloud.py 
 
-build-dir dir="markdown" target="pages":
+build-dir dir="." target="pages":
     @mkdir -p {{ target }}
-    @find {{ dir }} -maxdepth 1 -name "*.md" -exec ./scripts/build-page.sh {} {{ target }} \;
+    @find "markdown/{{ dir }}" -maxdepth 1 -name "*.md" -exec ./scripts/build-page.sh {} {{ target }} \;
 
 build-main:
-    @just build-dir markdown pages
+    @just build-dir
 
 build-blog:
-    @just build-dir markdown/blog pages/blog
-    @just build-dir markdown/blog/posts pages/blog/posts
+    @just build-dir blog
+    @just build-dir blog/posts
 
 # Iterate over all files in markdown
 # and check time-stamp for changes
