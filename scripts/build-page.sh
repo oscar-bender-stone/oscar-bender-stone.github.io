@@ -5,19 +5,27 @@
 # Name of file *relative* to the folder `markdown``
 SRC_FILE="$1"
 
-# Form output folder
+# Get relative dir.
+# Need to be careful to remove
+# extra slashes and dots!
 SRC_DIR=$(dirname "$SRC_FILE")
-OUT_DIR="pages${SRC_DIR#markdown}"
+RELATIVE_DIR=${SRC_DIR#markdown}
+if [ "$RELATIVE_DIR" = "/." ]; then
+  RELATIVE_DIR=""
+fi
 
-# Form output file path
+# Set output folder
+OUT_DIR="pages${RELATIVE_DIR}"
+
+echo "RELATIVE_DIR: $RELATIVE_DIR"
+echo "OUT_DIR: $OUT_DIR"
+
+# Set output file path
 SRC_STEM=$(basename "$SRC_FILE" .md)
 OUT_FILE="$OUT_DIR/$SRC_STEM.html"
 
 # Get relative path from target file
 TARGET="$TARGET_DIR/$STEM.html"
-
-echo "$OUT_DIR"
-echo "$OUT_FILE"
 
 if [ ! -f "$TARGET" ] || [ "$SRC_FILE" -nt "$TARGET" ]; then
   echo " Compiling $SRC_FILE ──> $OUT_FILE"
@@ -26,7 +34,14 @@ if [ ! -f "$TARGET" ] || [ "$SRC_FILE" -nt "$TARGET" ]; then
   mkdir -p "$OUT_DIR"
 
   # Find number of dots needed
-  SLASHES=$(echo "${OUT_DIR}" | tr -cd "/" | wc -m)
+  if [ -z "$RELATIVE_DIR" ]; then
+    SLASHES=0
+  else
+    SLASHES=$(printf '%s' "$RELATIVE_DIR" | tr -cd "/" | wc -m)
+    # First folder in relative path
+    # counts as a slash
+    SLASHES=$((SLASHES + 1))
+  fi
 
   # Get start of relative path
   ROOT_PREFIX=""
@@ -35,6 +50,10 @@ if [ ! -f "$TARGET" ] || [ "$SRC_FILE" -nt "$TARGET" ]; then
     ROOT_PREFIX=$(printf '%s../' "$ROOT_PREFIX")
     COUNTER=$((COUNTER - 1))
   done
+
+  if [ -z "$ROOT_PREFIX" ]; then
+    ROOT_PREFIX="./"
+  fi
 
   pandoc "$SRC_FILE" -d ./scripts/pandoc/config.yaml \
     -V root="$ROOT_PREFIX" \
