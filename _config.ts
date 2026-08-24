@@ -1,4 +1,5 @@
 import lume from "lume/mod.ts";
+import date from "lume/plugins/date.ts";
 import nav from "lume/plugins/nav.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 
@@ -11,6 +12,7 @@ const site = lume(
 
 site.use(nav());
 site.use(pagefind());
+site.use(date());
 
 site.data("layout", "layout.vto");
 site.copy("css");

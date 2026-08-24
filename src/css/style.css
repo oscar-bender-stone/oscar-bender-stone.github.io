@@ -243,6 +243,22 @@ a {
   border: var(--border);
 }
 
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1.0);
+}
+
+/* Ensure paragraph reset */
+.site-footer p {
+  margin: 0;
+  background: transparent;
+}
+
 @media screen and (max-width: 768px) {
   .my-row {
     flex-direction: column;
