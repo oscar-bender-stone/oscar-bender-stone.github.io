@@ -17,7 +17,8 @@ title: About
 
 | University of Iowa                                                 |
 | ------------------------------------------------------------------ |
-| **Address:** TBD                                                   |
+| **Address:** 1 Jessup Hall                                         |
+| Iowa City, IA, 552252                                              |
 | **Email:** [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu) |
 
 </div>
