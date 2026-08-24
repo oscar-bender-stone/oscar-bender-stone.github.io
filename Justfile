@@ -4,9 +4,7 @@
 default: serve
 
 push:
-    git merge main && \
-    git push && \
-    git checkout @{-1}
+    git merge main && git push
 
 wordcloud:
     uv --project ./source/python \
