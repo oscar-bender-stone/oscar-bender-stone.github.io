@@ -18,7 +18,7 @@ title: About
 | University of Iowa                                                             |
 | ------------------------------------------------------------------------------ |
 | **Address:** 1 Jessup Hall                                                     |
-| Iowa City, IA, 552252                                                          |
+| Iowa City, IA, 52242                                                           |
 | **Email:** [oscar-bender-stone@uiowa.edu](mailto:oscar-bender-stone@uiowa.edu) |
 
 </div>

@@ -8,7 +8,9 @@ push:
       git merge gh-pages main && \
       git push && \
       git checkout main && \
-      git push
+      git merge gh-pages main && \
+      git push && \
+      git checkout @{-2}
 
 wordcloud:
     @uv --project ./source/python \
