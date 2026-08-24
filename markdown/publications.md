@@ -1,9 +1,8 @@
 ---
+title: Publications
 nocite: |
   @*
 ---
-
-# Publications
 
 <div class="column" markdown="1">
 

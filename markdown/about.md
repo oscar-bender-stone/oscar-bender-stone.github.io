@@ -1,7 +1,9 @@
+---
+title: About
+---
+
 <!-- SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> -->
 <!-- SPDX-License-Identifier: LicenseRef-Proprietary -->
-
-# About
 
 <div class="my-column" markdown="1">
 <div class="my-row" markdown="1">
