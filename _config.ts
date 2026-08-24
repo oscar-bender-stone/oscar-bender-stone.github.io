@@ -1,5 +1,6 @@
 import lume from "lume/mod.ts";
 import date from "lume/plugins/date.ts";
+import lightningcss from "lume/plugins/lightningcss.ts";
 import nav from "lume/plugins/nav.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 
@@ -13,9 +14,10 @@ const site = lume(
 site.use(nav());
 site.use(pagefind());
 site.use(date());
+site.use(lightningcss());
 
 site.data("layout", "layout.vto");
-site.copy("css");
+site.add("css");
 site.copy("assets");
 
 site.preprocess([".md"], (pages) => {
