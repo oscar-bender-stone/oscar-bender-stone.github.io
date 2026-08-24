@@ -1,21 +1,11 @@
 /* SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> */
 /* SPDX-License-Identifier: MIT */
 
-@font-face {
-  font-family: "Atkinson Hyperlegible Next";
-  src: url("assets/fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@layer pages;
 
-@font-face {
-  font-family: "Atkinson Hyperlegible Next";
-  src: url("assets/fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import "./_base.css" layer(pages);
+@import "./_publications.css" layer(pages);
+@import "./_search.css" layer(pages);
 
 :root {
   --font-primary: "Atkinson Hyperlegible Next", sans-serif;
@@ -26,6 +16,16 @@
   --tab-width: 15px;
   --white: #fff;
   --black: #000;
+}
+
+.site-search {
+  max-width: 400px;
+  margin: 1rem 0;
+  --pagefind-ui-primary: var(--dark-blue-1);
+  --pagefind-ui-text: var(--dark-blue-1);
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: var(--dark-blue-2);
+  --pagefind-ui-border-radius: 4px;
 }
 
 * {
@@ -230,6 +230,12 @@ a {
   border: var(--border);
 }
 
+@media (max-width: 768px) {
+  .my-row {
+    flex-direction: column;
+  }
+}
+
 .my-col img {
   max-width: 100%;
   height: auto;
@@ -241,6 +247,22 @@ a {
 
 .my-col:last-of-type {
   border: var(--border);
+}
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1.0);
+}
+
+/* Ensure paragraph reset */
+.site-footer p {
+  margin: 0;
+  background: transparent;
 }
 
 @media screen and (max-width: 768px) {

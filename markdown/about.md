@@ -1,7 +1,9 @@
+---
+title: About
+---
+
 <!-- SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> -->
 <!-- SPDX-License-Identifier: LicenseRef-Proprietary -->
-
-# About
 
 <div class="my-column" markdown="1">
 <div class="my-row" markdown="1">
@@ -13,10 +15,11 @@
 
 </div>
 
-| University of Iowa                                                 |
-| ------------------------------------------------------------------ |
-| **Address:** TBD                                                   |
-| **Email:** [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu) |
+| University of Iowa                                                             |
+| ------------------------------------------------------------------------------ |
+| **Address:** 1 Jessup Hall                                                     |
+| Iowa City, IA, 552252                                                          |
+| **Email:** [oscar-bender-stone@uiowa.edu](mailto:oscar-bender-stone@uiowa.edu) |
 
 </div>
 
@@ -40,7 +43,7 @@ I earned my undergraduate degree at the
 
 ## Interests
 
-![](../assets/images/interests_cloud.png){alt="Interests Word Cloud."}\
+![](../assets/images/interests_cloud.png){alt="Interests Word Cloud."}
 
 </div>
 </div>

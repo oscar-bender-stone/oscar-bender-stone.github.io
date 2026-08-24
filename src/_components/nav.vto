@@ -1,0 +1,9 @@
+  <nav class="navbar">
+    {{ for item of nav.menu().children }}
+      {{ if item.data }}
+        <a href="{{ item.data.url }}" class="navbox">
+          {{ item.data.title || item.data.basename }}
+        </a>
+      {{ /if }}
+    {{ /for }}
+  </nav>

@@ -1,0 +1,56 @@
+/* SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> */
+/* SPDX-License-Identifier: CC0-1.0 */
+/* SPDX-FileContributor: Google Gemini <https://gemini/google.com> */
+
+
+/* Bibliography container. */
+#refs,
+.csl-bib-body {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--dark-blue-1);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* Individual reference entry. */
+.csl-entry {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  align-items: baseline
+}
+
+/* Style for bracketed numbers. */
+.csl-left-margin {
+  font-weight: bold;
+  color: var(--dark-blue-2);
+  font-feature-settings: "tnum";
+  user-select: text
+}
+
+/* Citation text. */
+.csl-right-inline {
+  color: var(--dark-blue-1);
+  line-height: 1.6;
+}
+
+/* Journal names and book titles. */
+.csl-entry em {
+  color: var(--dark-blue-2);
+  font-style: italic;
+}
+
+/* DOI links. */
+#refs a {
+  color: var(--dark-blue-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+  font-weight: bold;
+}
+
+#refs a:hover {
+  color: var(--dark-blue-3);
+}

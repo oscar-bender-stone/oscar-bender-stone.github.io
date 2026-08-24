@@ -1,14 +1,10 @@
 ---
+title: Publications
+bibliography: assets/publications.bib
 nocite: |
   @*
 ---
 
-# Publications
-
-<div class="column" markdown="1">
-
 ::: {#refs}
 
 :::
-
-</div>
