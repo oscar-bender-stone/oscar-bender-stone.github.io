@@ -3,8 +3,13 @@
 
 default: serve
 
+current_branch := `git branch --show-current`
+
 push:
-    git merge main && git push
+    git checkout main
+    git merge {{ current_branch }}
+    git push origin main
+    git checkout {{ current_branch }}
 
 wordcloud:
     uv --project ./source/python \
