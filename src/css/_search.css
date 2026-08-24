@@ -2,56 +2,61 @@
 /* SPDX-License-Identifier: CC0-1.0 */
 /* SPDX-FileContributor: Google Gemini <https://gemini/google.com> */
 
-/* Header Flex Layout */
-.header-banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--dark-blue-1);
-  padding: 1rem 2rem;
-  gap: 1.5rem;
-}
-
-/* Pagefind Header Integration */
+/* 1. Ensure the container holds absolute positioning */
 .site-search {
-  --pagefind-ui-scale: 0.85;
-  /* Scaled down to fit header */
-  --pagefind-ui-primary: var(--dark-blue-1);
-  --pagefind-ui-text: var(--dark-blue-1);
-  --pagefind-ui-background: #ffffff;
-  --pagefind-ui-border: transparent;
-  --pagefind-ui-border-radius: 20px;
-  --pagefind-ui-font: "Atkinson Hyperlegible Next", sans-serif;
-  margin: 0;
-  width: 280px;
-  flex-shrink: 0;
+  position: relative;
+  width: 300px;
 }
 
-/* Custom Input Box */
-.pagefind-ui__search-input {
-  background-color: #ffffff !important;
-  color: var(--dark-blue-1) !important;
-  border-radius: 20px !important;
-  font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.pagefind-ui__search-input::placeholder {
-  color: var(--dark-blue-2) !important;
-  opacity: 0.7;
-}
-
-/* Position Floating Search Results Overlay */
+/* 2. Floating results drawer container */
 .pagefind-ui__drawer {
-  position: absolute;
-  right: 2rem;
-  top: 100%;
-  width: 380px;
-  max-height: 450px;
-  overflow-y: auto;
-  background-color: #ffffff;
-  border: 2px solid var(--dark-blue-1);
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  z-index: 1000;
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  right: 0 !important;
+  width: 420px !important;
+  /* Expands wider than the input for readable snippets */
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  background-color: #ffffff !important;
+  border: 2px solid var(--dark-blue-1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35) !important;
+  padding: 1rem !important;
+  z-index: 9999 !important;
+}
+
+/* 3. Text contrast and typography */
+.pagefind-ui__result-link,
+.pagefind-ui__result-title {
+  color: var(--dark-blue-1) !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+}
+
+.pagefind-ui__result-excerpt {
+  color: #2d3748 !important;
+  /* High contrast dark gray */
+  font-size: 0.875rem !important;
+  line-height: 1.4 !important;
+  margin-top: 0.25rem !important;
+}
+
+/* 4. Match search term highlights */
+.pagefind-ui__result-excerpt mark {
+  background-color: #fef08a !important;
+  /* Soft yellow highlight */
+  color: #000000 !important;
+  font-weight: 600 !important;
+  padding: 1px 3px !important;
+  border-radius: 2px !important;
+}
+
+/* 5. Clean divider between results */
+.pagefind-ui__result {
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding: 0.75rem 0 !important;
+}
+
+.pagefind-ui__result:last-child {
+  border-bottom: none !important;
 }
