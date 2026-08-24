@@ -25,6 +25,10 @@
   </header>
 
   <main data-pagefind-body>
+    {{ if title && url !== "/" }}
+      <h1>{{ title }}</h1>
+    {{ /if }}
+
     {{ content }}
   </main>
 
