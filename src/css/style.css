@@ -208,6 +208,10 @@ a {
   box-shadow: 0 0 0 2px var(--white);
 }
 
+.navbox:last-child {
+  margin-left: auto;
+}
+
 .my-row {
   display: flex;
   flex-direction: row;
@@ -230,11 +234,7 @@ a {
   border: var(--border);
 }
 
-@media (max-width: 768px) {
-  .my-row {
-    flex-direction: column;
-  }
-}
+
 
 .my-col img {
   max-width: 100%;

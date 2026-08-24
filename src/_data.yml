@@ -1,0 +1,7 @@
+nav:
+  - text: "About"
+    url: "/about/"
+  - text: "Publications"
+    url: "/publications/"
+  - text: "Blog"
+    url: "/blog/"

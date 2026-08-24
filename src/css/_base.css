@@ -18,6 +18,8 @@
   font-display: swap;
 }
 
+
+
 /* Container for header banner and tabs */
 .site-header {
   width: 100%;
@@ -32,6 +34,18 @@
   padding: 1rem 1.5rem;
   gap: 1.5rem;
   position: relative;
+}
+
+/* Push the last item (Blog) to the right or add a divider */
+.site-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Optional: Pushes Blog toward the right side of the nav bar */
+.site-nav a[href*="/blog/"] {
+  margin-left: auto;
+  opacity: 0.9;
 }
 
 /* Heading reset & flex growth for the horizontal line */
