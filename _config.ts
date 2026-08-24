@@ -22,7 +22,7 @@ site.preprocess([".md"], (pages) => {
 
 site.preprocess([".md"], async (pages) => {
   for (const page of pages) {
-    if (page.data.nocite) {
+    if (page.data.nocite && page.data.bibliography) {
       const filePath = site.src(page.src.path + page.src.ext);
       const bibFile = page.data.bibliography;
 
