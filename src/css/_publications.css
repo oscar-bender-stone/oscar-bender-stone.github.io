@@ -1,32 +1,33 @@
-.column,
+/* Bibliography container. */
 #refs,
-.csl-bib-body,
-.csl-entry {
-  background: transparent !important;
-  color: #ffffff !important;
-}
-
 .csl-bib-body {
   margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  color: var(--dark-blue-1);
+  font-size: 1rem;
   line-height: 1.65;
 }
 
+/* Individual reference entry. */
 .csl-entry {
-  position: relative;
-  padding-left: 0;
+  margin-bottom: 1.25rem;
 }
 
+/* Journal names and book titles. */
+.csl-entry em {
+  color: var(--dark-blue-2);
+  font-style: italic;
+}
+
+/* DOI links. */
 #refs a {
-  color: #93c5fd;
+  color: var(--dark-blue-2);
   text-decoration: underline;
   text-underline-offset: 3px;
   word-break: break-all;
+  font-weight: bold;
 }
 
 #refs a:hover {
-  color: #ffffff;
+  color: var(--dark-blue-3);
 }
