@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title || "My Site" }}</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<header>
+  <h2 id="site-title">Oscar Bender-Stone</h2>
+
+  <nav class="navbar">
+    {{ nav.menu() }}
+  </nav>
+</header>
+
+<body>
+  <main>
+    {{ if title }}
+      <h1>{{ title }}</h1>
+    {{ /if }}
+
+    {{ content }}
+  </main>
+
+  <footer>
+    <small>
+      Copyright © 2026 Oscar Bender-Stone.
+    </small>
+  </footer>
+</body>
+
+</html>
