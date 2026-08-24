@@ -1,11 +1,6 @@
 # SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com>
 # SPDX-License-Identifier: MIT
 
-# Include copyright generation here
-# to avoid REUSE errors.
-copyright := "SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com"
-license := "SPDX-License-" + "Identifier: " + "MIT"
-
 default: build
 
 all: build push
@@ -43,10 +38,9 @@ build:
     @just build-blog
     @echo "Build complete."
 
-# For security, we avoid recursive flag (r) in rm
 clean:
     @echo "Removing generated HTML files..."
-    rm -rf pages/css/*.css
+    rm -f pages/css/*.css
     rm -f pages/*.html
     rm -f pages/blog/*.html
     rm -f pages/blog/posts/*.html
