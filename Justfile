@@ -6,6 +6,7 @@ default: serve
 current_branch := `git branch --show-current`
 
 push:
+    git push
     git checkout main
     git merge {{ current_branch }}
     git push origin main
