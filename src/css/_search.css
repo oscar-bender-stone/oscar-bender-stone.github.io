@@ -26,7 +26,7 @@
 
 /* 2. High-Contrast Placeholder (Exceeds 4.5:1 ratio) */
 .pagefind-ui__search-input::placeholder {
-  color: var(--dark-blue-2) !important;
+  color: #475569 !important;
   opacity: 1 !important;
 }
 
