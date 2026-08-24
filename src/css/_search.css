@@ -26,10 +26,8 @@
 
 /* 2. High-Contrast Placeholder (Exceeds 4.5:1 ratio) */
 .pagefind-ui__search-input::placeholder {
-  color: #475569 !important;
-  /* Slate gray: 5.6:1 contrast on white */
+  color: var(--dark-blue-2) !important;
   opacity: 1 !important;
-  /* Overrides browser default opacity fade */
 }
 
 /* 3. Focus Ring for Accessibility (WCAG 2.2 Focus Visible) */
