@@ -3,7 +3,9 @@
 
 @layer pages;
 
+@import "./_base.css" layer(pages);
 @import "./_publications.css" layer(pages);
+@import "./_search.css" layer(pages);
 
 @font-face {
   font-family: "Atkinson Hyperlegible Next";

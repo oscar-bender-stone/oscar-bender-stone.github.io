@@ -1,3 +1,7 @@
+{{# SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> #}}
+{{# SPDX-License-Identifier: CC0-1.0 #}}
+{{# SPDX-FileContributor: Google Gemini <https://gemini/google.com> */ #}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,24 +11,27 @@
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 
-<header>
-  <h2 id="site-title">Oscar Bender-Stone</h2>
-  {{ comp.nav() }}
-  <div id="search" class="site-search"></div>
-</header>
-
 <body>
-  <main>
-    {{ if title }}
-      <h1>{{ title }}</h1>
-    {{ /if }}
 
+  <header class="site-header">
+    <div class="header-banner">
+      <h1 class="site-title-heading">
+        <a href="/" class="site-title-link">Oscar Bender-Stone</a>
+      </h1>
+      <div id="search" class="site-search"></div>
+    </div>
+
+    {{ comp.nav() }}
+  </header>
+
+  <main data-pagefind-body>
     {{ content }}
   </main>
 
   <footer class="site-footer">
-    <p>Copyright &copy; {{ date |> date("yyyy") }} Oscar Bender-Stone.</p>
+    <p>Copyright &copy; {{ new Date().getFullYear() }} Oscar Bender-Stone.</p>
   </footer>
+
 </body>
 
 </html>

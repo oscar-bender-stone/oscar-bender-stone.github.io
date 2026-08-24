@@ -1,0 +1,39 @@
+/* Container for header banner and tabs */
+.site-header {
+  width: 100%;
+  background-color: var(--dark-blue-1);
+}
+
+/* Flexbox wrapper separating Title + Line (left) and Search (right) */
+.header-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Heading reset & flex growth for the horizontal line */
+.site-title-heading {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  flex-grow: 1;
+  /* Pushes the ::after line to expand toward the search box */
+  font-size: 1.8rem;
+}
+
+/* Title link text */
+.site-title-link {
+  color: var(--white) !important;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+  /* Prevents name from wrapping on mobile */
+}
+
+.site-title-link:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
