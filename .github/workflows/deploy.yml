@@ -27,7 +27,7 @@ jobs:
       - name: Setup Pandoc
         uses: pandoc/actions/setup@v1
         with:
-          version: '3.x'
+          version: '3.10'
 
       - name: Setup Deno
         uses: denoland/setup-deno@v2
