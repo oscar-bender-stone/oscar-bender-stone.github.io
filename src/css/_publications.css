@@ -22,7 +22,7 @@
   font-weight: bold;
   color: var(--dark-blue-2);
   font-feature-settings: "tnum";
-  /* Ensures equal-width numeric spacing */
+  user-select: text
 }
 
 /* Citation text. */

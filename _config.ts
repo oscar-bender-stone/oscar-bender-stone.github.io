@@ -12,7 +12,11 @@ const site = lume(
 );
 
 site.use(nav());
-site.use(pagefind());
+site.use(pagefind({
+  ui: {
+    containerId: "search",
+  },
+}));
 site.use(date());
 site.use(lightningcss());
 

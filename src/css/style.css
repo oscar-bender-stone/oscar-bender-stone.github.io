@@ -32,6 +32,16 @@
   --black: #000;
 }
 
+.site-search {
+  max-width: 400px;
+  margin: 1rem 0;
+  --pagefind-ui-primary: var(--dark-blue-1);
+  --pagefind-ui-text: var(--dark-blue-1);
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: var(--dark-blue-2);
+  --pagefind-ui-border-radius: 4px;
+}
+
 * {
   margin: 0;
   padding: 0;
