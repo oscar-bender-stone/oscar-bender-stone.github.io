@@ -8,6 +8,7 @@ push:
       git merge gh-pages main && \
       git push && \
       git checkout main && \
+      git merge gh-pages main && \
       git push
 
 wordcloud:
