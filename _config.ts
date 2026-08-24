@@ -11,6 +11,7 @@ const site = lume(
 
 site.data("layout", "layout.vto");
 site.copy("css");
+site.copy("assets");
 
 site.preprocess([".md"], (pages) => {
   pages.forEach((p) => p.data.url = p.data.url.replace("/markdown/", "/"));
