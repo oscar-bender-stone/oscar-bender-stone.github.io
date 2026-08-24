@@ -1,0 +1,32 @@
+.column,
+#refs,
+.csl-bib-body,
+.csl-entry {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.csl-bib-body {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.csl-entry {
+  position: relative;
+  padding-left: 0;
+}
+
+#refs a {
+  color: #93c5fd;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+}
+
+#refs a:hover {
+  color: #ffffff;
+}

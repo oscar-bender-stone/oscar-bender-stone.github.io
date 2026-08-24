@@ -1,6 +1,10 @@
 /* SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> */
 /* SPDX-License-Identifier: MIT */
 
+@layer pages;
+
+@import "./_publications.css" layer(pages);
+
 @font-face {
   font-family: "Atkinson Hyperlegible Next";
   src: url("assets/fonts/atkinson-hyperlegible-next/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
