@@ -10,7 +10,25 @@
 
 /* Individual reference entry. */
 .csl-entry {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.5rem;
   margin-bottom: 1.25rem;
+  align-items: baseline
+}
+
+/* Style for bracketed numbers. */
+.csl-left-margin {
+  font-weight: bold;
+  color: var(--dark-blue-2);
+  font-feature-settings: "tnum";
+  /* Ensures equal-width numeric spacing */
+}
+
+/* Citation text. */
+.csl-right-inline {
+  color: var(--dark-blue-1);
+  line-height: 1.6;
 }
 
 /* Journal names and book titles. */
