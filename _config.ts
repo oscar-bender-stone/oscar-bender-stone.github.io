@@ -25,10 +25,12 @@ site.preprocess([".md"], async (pages) => {
     if (page.data.nocite && page.data.bibliography) {
       const filePath = site.src(page.src.path + page.src.ext);
       const bibFile = page.data.bibliography;
+      const cslFile = "assets/csl/acm.csl";
 
       const { stdout } = await new Deno.Command("pandoc", {
         args: [
           "--citeproc",
+          `--csl=${cslFile}`,
           `--bibliography=${bibFile}`,
           filePath,
           "-t",
