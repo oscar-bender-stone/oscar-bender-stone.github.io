@@ -10,16 +10,7 @@
 
 <header>
   <h2 id="site-title">Oscar Bender-Stone</h2>
-
-  <nav class="navbar">
-    {{ for item of nav.menu().children }}
-      {{ if item.data }}
-        <a href="{{ item.data.url }}" class="navbox">
-          {{ item.data.title || item.data.basename }}
-        </a>
-      {{ /if }}
-    {{ /for }}
-  </nav>
+  {{ comp.nav() }}
 </header>
 
 <body>
