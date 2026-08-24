@@ -31,7 +31,7 @@ I study Programming Languages. Specifically, I'm working on
 like to incorporate theoretical ideas, especially from mathematical logic and
 computability theory.
 
-## Previous Affilations
+## Previous Affiliations
 
 I earned my undergraduate degree at the
 [University of Colorado at Boulder](https://www.colorado.edu); I worked in the
@@ -40,7 +40,7 @@ I earned my undergraduate degree at the
 
 ## Interests
 
-![](../assets/images/interests_cloud.png){alt="Interests wordcloud."}\
+![](../assets/images/interests_cloud.png){alt="Interests Word Cloud."}\
 
 </div>
 </div>
