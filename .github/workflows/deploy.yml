@@ -1,0 +1,49 @@
+name: Deploy Site
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checout@v4
+
+      - name: Setup Pandoc
+        uses: pandoc/actions/setup@v1
+        with:
+          version: '3.x'
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          cache: true
+
+      - name: Build site
+        run: deno task lume
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload _site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
