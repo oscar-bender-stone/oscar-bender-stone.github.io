@@ -42,7 +42,7 @@ I earned my undergraduate degree at the
 
 ## Interests
 
-![](../assets/images/interests_cloud.png){alt="Interests Word Cloud."}\
+![](../assets/images/interests_cloud.png){alt="Interests Word Cloud."}
 
 </div>
 </div>
