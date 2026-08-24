@@ -15,11 +15,11 @@ title: About
 
 </div>
 
-| University of Iowa                                                 |
-| ------------------------------------------------------------------ |
-| **Address:** 1 Jessup Hall                                         |
-| Iowa City, IA, 552252                                              |
-| **Email:** [obenderstone@uiowa.edu](mailto:obenderstone@uiowa.edu) |
+| University of Iowa                                                             |
+| ------------------------------------------------------------------------------ |
+| **Address:** 1 Jessup Hall                                                     |
+| Iowa City, IA, 552252                                                          |
+| **Email:** [oscar-bender-stone@uiowa.edu](mailto:oscar-bender-stone@uiowa.edu) |
 
 </div>
 
