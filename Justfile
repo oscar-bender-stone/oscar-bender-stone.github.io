@@ -4,21 +4,17 @@
 default: serve
 
 push:
-    @git checkout gh-pages && \
-      git merge gh-pages main && \
-      git push && \
-      git checkout main && \
-      git merge gh-pages main && \
-      git push && \
-      git checkout @{-2}
+    git merge main && \
+    git push && \
+    git checkout @{-2}
 
 wordcloud:
-    @uv --project ./source/python \
+    uv --project ./source/python \
       run ./source/python/my_wordcloud.py 
 
 serve:
     deno task serve
 
 clean:
-    @echo "Removing generated HTML files..."
+    echo "Removing generated HTML files..."
     rm -rf _site
