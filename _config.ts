@@ -6,6 +6,7 @@ import date from "lume/plugins/date.ts";
 import lightningcss from "lume/plugins/lightningcss.ts";
 import nav from "lume/plugins/nav.ts";
 import pagefind from "lume/plugins/pagefind.ts";
+import readingInfo from "lume/plugins/reading_info.ts";
 
 const site = lume(
   {
@@ -22,6 +23,7 @@ site.use(pagefind({
 }));
 site.use(date());
 site.use(lightningcss());
+site.use(readingInfo());
 
 site.data("layout", "layout.vto");
 site.add("css");
@@ -32,11 +34,14 @@ site.preprocess([".md"], (pages) => {
 });
 
 site.preprocess([".md"], (pages) => {
-  pages
-    .filter((page) => page.src.path.startsWith("/blog/posts/"))
-    .forEach((page) => {
-      page.data.type = "post";
-    });
+  for (const page of pages) {
+    const url = page.data.url;
+    if (url === "/blog/") {
+      page.data.layout = "blog_index.vto";
+    } else if (url.startsWith("/blog/posts/")) {
+      page.data.layout = "post.vto";
+    }
+  }
 });
 
 site.preprocess([".md"], async (pages) => {

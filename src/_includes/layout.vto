@@ -1,13 +1,9 @@
-{{# SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> #}}
-{{# SPDX-License-Identifier: CC0-1.0 #}}
-{{# SPDX-FileContributor: Google Gemini <https://gemini/google.com> */ #}}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title || "My Site" }}</title>
+  <title>{{ title || "Oscar Bender-Stone" }}</title>
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 
@@ -30,10 +26,6 @@
     {{ /if }}
 
     {{ content }}
-
-    {{ if url === "/blog/" }}
-      {{ comp.post_list() }}
-    {{ /if }}
   </main>
 
   <footer class="site-footer">

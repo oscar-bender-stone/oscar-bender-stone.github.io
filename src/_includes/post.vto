@@ -1,0 +1,42 @@
+---
+layout: layout.vto
+---
+
+<nav class="post-nav-top">
+  <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+</nav>
+
+<header class="post-header">
+  <div class="post-meta-box">
+    <div class="meta-line">
+      <span class="meta-label">Published:</span>
+      <time datetime="{{ date |> date('yyyy-MM-dd') }}">{{ date |> date("MMMM d, yyyy") }}</time>
+    </div>
+
+    <div class="meta-line">
+      <span class="meta-label">Reading time:</span>
+      <span>{{ readingInfo.minutes }} min read</span>
+    </div>
+
+    {{ if modified }}
+      <div class="meta-line meta-updated">
+        <span class="meta-label">Last updated:</span>
+        {{ if modified_url }}
+          <a href="{{ modified_url }}" class="modified-link" target="_blank" rel="noopener">
+            {{ modified |> date("MMMM d, yyyy") }} ↗
+          </a>
+        {{ else }}
+          <time datetime="{{ modified |> date('yyyy-MM-dd') }}">{{ modified |> date("MMMM d, yyyy") }}</time>
+        {{ /if }}
+      </div>
+    {{ /if }}
+  </div>
+</header>
+
+<article class="post-content">
+  {{ content }}
+</article>
+
+<nav class="post-nav-bottom">
+  <a href="/blog/" class="back-link">&larr; Back to Blog</a>
+</nav>
