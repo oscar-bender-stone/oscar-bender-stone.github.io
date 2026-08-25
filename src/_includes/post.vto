@@ -10,12 +10,14 @@ layout: layout.vto
   <div class="post-meta-box">
     <div class="meta-line">
       <span class="meta-label">Published:</span>
-      <time datetime="{{ date |> date('yyyy-MM-dd') }}">{{ date |> date("MMMM d, yyyy") }}</time>
+      <time datetime="{{ date.toISOString().split('T')[0] }}" class="meta-value">
+        {{ date.toLocaleDateString("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" }) }}
+      </time>
     </div>
 
     <div class="meta-line">
       <span class="meta-label">Reading time:</span>
-      <span>{{ readingInfo.minutes }} min read</span>
+      {{ readingInfo.minutes }} {{ readingInfo.minutes == 1 ? "minute" : "minutes" }}
     </div>
 
     {{ if modified }}
