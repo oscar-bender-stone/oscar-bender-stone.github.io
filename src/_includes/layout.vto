@@ -30,6 +30,10 @@
     {{ /if }}
 
     {{ content }}
+
+    {{ if url === "/blog/" }}
+      {{ comp.post_list() }}
+    {{ /if }}
   </main>
 
   <footer class="site-footer">

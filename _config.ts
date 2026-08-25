@@ -31,6 +31,14 @@ site.preprocess([".md"], (pages) => {
   pages.forEach((p) => p.data.url = p.data.url.replace("/markdown/", "/"));
 });
 
+site.preprocess([".md"], (pages) => {
+  pages
+    .filter((page) => page.src.path.startsWith("/blog/posts/"))
+    .forEach((page) => {
+      page.data.type = "post";
+    });
+});
+
 site.preprocess([".md"], async (pages) => {
   for (const page of pages) {
     if (page.data.nocite && page.data.bibliography) {

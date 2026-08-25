@@ -1,11 +1,13 @@
 /* SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com> */
 /* SPDX-License-Identifier: MIT */
 
-@layer pages;
+@layer pages, components;
 
 @import "./_base.css" layer(pages);
 @import "./_publications.css" layer(pages);
 @import "./_search.css" layer(pages);
+
+@import "./_blog_post.css" layer(components);
 
 :root {
   --font-primary: "Atkinson Hyperlegible Next", sans-serif;

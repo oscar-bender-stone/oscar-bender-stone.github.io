@@ -1,0 +1,8 @@
+<ul class="post-list">
+  {{ for post of search.pages("url^=/blog/posts/", "date=desc") }}
+    <li class="post-item">
+      <time class="post-date">{{ post.date |> date("yyyy-MM-dd") }}</time>
+      <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
+    </li>
+  {{ /for }}
+</ul>
