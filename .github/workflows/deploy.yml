@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com>
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileContributor: Google Gemini <https://gemini/google.com>
+
 name: Deploy Site
 
 on:

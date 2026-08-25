@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com>
+// SPDX-License-Identifier: MIT
+
 import lume from "lume/mod.ts";
 import date from "lume/plugins/date.ts";
 import lightningcss from "lume/plugins/lightningcss.ts";
