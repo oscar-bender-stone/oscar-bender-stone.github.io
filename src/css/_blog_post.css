@@ -71,3 +71,55 @@
 .post-content>*:first-child {
   margin-top: 0;
 }
+
+
+/* Clean Academic Blockquote */
+.post-content blockquote {
+  /* 1. Structural layout enforcement 
+   * (Stops text overlapping) */
+  position: relative;
+  display: block !important;
+  margin: 2rem 0 2rem 2.5rem !important; 
+  padding: 0.85rem 1.15rem 0.85rem 2.25rem !important; 
+  /* 2. Visual design */
+  background-color: rgba(0, 0, 0, 0.02);
+  border-left: 4px solid var(--dark-blue-1);
+  color: var(--dark-blue-1);
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Clear vertical constraints for
+ * paragraphs inside markdown blocks */
+.post-content blockquote p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.post-content blockquote p + p {
+  margin-top: 0.75rem;
+}
+
+/* The Hanging Quote: 
+ * Anchored safely inside the padding space */
+.post-content blockquote::before {
+  content: "“";
+  position: absolute;
+  left: 0.65rem;
+  top: 0.4rem;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--dark-blue-1);
+  opacity: 0.5;
+}
+
+/* Citation positioning */
+.post-content blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
+  text-align: right;
+  opacity: 0.8;
+}
