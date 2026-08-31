@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: 2026 Oscar Bender-Stone <oscar-bender-stone@protonmail.com>
 // SPDX-License-Identifier: MIT
 
+import { dirname, join } from "jsr:@std/path";
 import lume from "lume/mod.ts";
 import date from "lume/plugins/date.ts";
 import lightningcss from "lume/plugins/lightningcss.ts";
@@ -47,16 +48,21 @@ site.preprocess([".md"], (pages) => {
 site.preprocess([".md"], async (pages) => {
   for (const page of pages) {
     if (page.data.nocite && page.data.bibliography) {
-      const filePath = site.src(page.src.path + page.src.ext);
-      const bibFile = page.data.bibliography;
-      const cslFile = "assets/csl/acm.csl";
+      const postPath = site.src(page.src.path + page.src.ext);
+      const postDir = dirname(postPath);
+
+      const bibPathRaw = page.data.bibliography;
+      const bibPath = ["./", "/", "assets"].some(prefix => bibPathRaw.startsWith(prefix))
+        ? site.src(bibPathRaw)
+        : join(postDir, bibPathRaw);
+      const cslPath = "assets/csl/acm.csl";
 
       const { stdout } = await new Deno.Command("pandoc", {
         args: [
           "--citeproc",
-          `--csl=${cslFile}`,
-          `--bibliography=${bibFile}`,
-          filePath,
+          `--csl=${cslPath}`,
+          `--bibliography=${bibPath}`,
+          postPath,
           "-t",
           "html",
         ],
