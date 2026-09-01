@@ -47,12 +47,12 @@ site.preprocess([".md"], (pages) => {
 
 site.preprocess([".md"], async (pages) => {
   for (const page of pages) {
-    if (page.data.nocite && page.data.bibliography) {
+    if (page.data.bibliography) {
       const postPath = site.src(page.src.path + page.src.ext);
       const postDir = dirname(postPath);
 
       const bibPathRaw = page.data.bibliography;
-      const bibPath = ["./", "/", "assets"].some(prefix => bibPathRaw.startsWith(prefix))
+      const bibPath = ["/", "assets"].some(prefix => bibPathRaw.startsWith(prefix))
         ? site.src(bibPathRaw)
         : join(postDir, bibPathRaw);
       const cslPath = "assets/csl/acm.csl";
@@ -60,6 +60,8 @@ site.preprocess([".md"], async (pages) => {
       const { stdout } = await new Deno.Command("pandoc", {
         args: [
           "--citeproc",
+          `--metadata=reference-section-title=References`,
+          "--metadata=link-citations=true",
           `--csl=${cslPath}`,
           `--bibliography=${bibPath}`,
           postPath,

@@ -295,3 +295,21 @@ a {
       inset var(--border-width) 0 var(--border-width) var(--border-width) var(--border-color);
   }
 }
+
+/* Styles reference tiles from Pandoc. */
+h1#bibliography {
+  background-color: transparent !important;
+  color: var(--dark-blue-1) !important;
+  padding: 0 !important;
+  display: block !important;
+  width: auto !important;
+  text-align: center !important;
+  font-weight: bold !important;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1#bibliography::after {
+  display: none !important;
+  content: none !important;
+}
