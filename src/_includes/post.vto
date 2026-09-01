@@ -10,9 +10,7 @@ layout: layout.vto
   <div class="post-meta-box">
     <div class="meta-line">
       <span class="meta-label">Published:</span>
-      <time datetime="{{ date.toISOString().split('T')[0] }}" class="meta-value">
-        {{ date.toLocaleDateString("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" }) }}
-      </time>
+      {{ comp.post_date({ date: date, class: "meta-value" }) }}
     </div>
 
     <div class="meta-line">

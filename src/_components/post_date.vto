@@ -1,0 +1,11 @@
+{{ set d = new Date(date) }}
+{{ set iso = d.toISOString().split("T")[0] }}
+{{ set human = d.toLocaleDateString("en-US", { timeZone: "UTC", month: "long", day: "numeric", year: "numeric" }) }}
+
+{{ if format == "iso" }}
+  {{ iso }}
+{{ else if className }}
+  <time datetime="{{ iso }}" class="{{ className }}">{{ human }}</time>
+{{ else }}
+  <time datetime="{{ iso }}">{{ human }}</time>
+{{ /if }}

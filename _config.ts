@@ -22,9 +22,14 @@ site.use(pagefind({
     containerId: "search",
   },
 }));
-site.use(date());
 site.use(lightningcss());
 site.use(readingInfo());
+
+site.use(date({
+  options: {
+    useUTC: true,
+  },
+}));
 
 site.data("layout", "layout.vto");
 site.add("css");
